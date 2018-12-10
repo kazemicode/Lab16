@@ -1,7 +1,10 @@
+# Sara Kazemi and Cody Young
 # Lab 16 - Web Scraping
+# CST 205
 
 import urllib.request
 
+# Lab 16 warmup demonstrates how to write to an HTML file with Python
 def makePage():
     # replace the directory in the line below with the path to your file
     file1 = open("superweb.html", "wt")
@@ -40,6 +43,5 @@ def getLatestPosts(source, target):
 
 file = open("scrapings.html", "wt")
 html_file = urllib.request.urlopen("http://www.kazemicode.org/blog/blog").read().decode("utf-8")
-#print(html_file)
 getLatestPosts(html_file, file)
 file.close()
